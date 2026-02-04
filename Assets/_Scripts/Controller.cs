@@ -31,11 +31,13 @@ public class Controller2D : MonoBehaviour
     void Start()
     {
         col = GetComponent<Collider2D>();
+
         movementFilter = new ContactFilter2D();
         movementFilter.SetLayerMask(groundLayer);
         movementFilter.useLayerMask = true;
         movementFilter.useTriggers = false;
     }
+
 
     void Update()
     {
