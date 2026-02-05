@@ -19,6 +19,7 @@ public class PlayerAnimation : MonoBehaviour
     public GameObject run;
     public GameObject jump;
     public GameObject attack;
+    public GameObject attack2;
     public GameObject getHit;
 
     [Header("Settings")]
@@ -27,6 +28,7 @@ public class PlayerAnimation : MonoBehaviour
     [Tooltip("If LeftShift held (or movement magnitude > runThreshold) treat as run")]
     public float runThreshold = 0.9f;
     public float attackDuration = 1f;
+    public float attack2Duration = 1f;
     public float hitDuration = 0.5f;
 
     [Header("Jump animation")]
@@ -36,6 +38,7 @@ public class PlayerAnimation : MonoBehaviour
     // internal
     private List<GameObject> allObjects;
     private float attackTimer = 0f;
+    private float attack2Timer = 0f;
     private float hitTimer = 0f;
     private float jumpTimer = 0f;
 
@@ -49,7 +52,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void Start()
     {
-        allObjects = new List<GameObject> { idle, walk, run, jump, attack, getHit };
+        allObjects = new List<GameObject> { idle, walk, run, jump, attack, attack2, getHit };
         allObjects.RemoveAll(g => g == null);
 
         prevFacingRight = facingRight;
@@ -62,6 +65,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         // timers
         if (attackTimer > 0f) attackTimer -= Time.deltaTime;
+        if (attack2Timer > 0f) attack2Timer -= Time.deltaTime;
         if (hitTimer > 0f) hitTimer -= Time.deltaTime;
         if (jumpTimer > 0f) jumpTimer -= Time.deltaTime;
 
@@ -111,6 +115,11 @@ public class PlayerAnimation : MonoBehaviour
             attackTimer = GetAttackDuration();
         }
 
+        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.G))
+        {
+            attack2Timer = GetAttackDuration();
+        }
+
         // jump animation trigger when player presses Space (or configured "Jump" button)
         if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
         {
@@ -133,6 +142,10 @@ public class PlayerAnimation : MonoBehaviour
         else if (attackTimer > 0f)
         {
             toShow = attack ?? idle;
+        }
+        else if (attack2Timer > 0f)
+        {
+            toShow = attack2 ?? idle;
         }
         else if (jumpTimer > 0f) // show jump immediately after pressing jump/space
         {
@@ -204,6 +217,7 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         return attackDuration;
+
     }
 
     void ActivateOnly(GameObject obj)
