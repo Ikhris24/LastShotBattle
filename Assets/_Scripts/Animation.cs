@@ -18,6 +18,7 @@ public class PlayerAnimation : MonoBehaviour
     public GameObject walk;
     public GameObject run;
     public GameObject jump;
+    public GameObject duck;
     public GameObject attack;
     public GameObject attack2;
     public GameObject getHit;
@@ -35,12 +36,17 @@ public class PlayerAnimation : MonoBehaviour
     [Tooltip("How long to show the jump state after the player presses jump (seconds)")]
     public float jumpDisplayTime = 0.25f;
 
+
+    [Header("Crouch")]
+    public bool isChrouching = false;
+
     // internal
     private List<GameObject> allObjects;
     private float attackTimer = 0f;
     private float attack2Timer = 0f;
     private float hitTimer = 0f;
     private float jumpTimer = 0f;
+    
 
     // facing / flip
     private bool facingRight = true;
@@ -52,7 +58,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void Start()
     {
-        allObjects = new List<GameObject> { idle, walk, run, jump, attack, attack2, getHit };
+        allObjects = new List<GameObject> { idle, walk, run, jump, duck, attack, attack2, getHit };
         allObjects.RemoveAll(g => g == null);
 
         prevFacingRight = facingRight;
@@ -68,6 +74,7 @@ public class PlayerAnimation : MonoBehaviour
         if (attack2Timer > 0f) attack2Timer -= Time.deltaTime;
         if (hitTimer > 0f) hitTimer -= Time.deltaTime;
         if (jumpTimer > 0f) jumpTimer -= Time.deltaTime;
+        
 
         // ground check (still available for other logic but NOT used to force jump state)
         bool isGrounded = true;
@@ -126,6 +133,11 @@ public class PlayerAnimation : MonoBehaviour
             jumpTimer = jumpDisplayTime;
         }
 
+        if (Input.GetKey(KeyCode.S)) 
+        {
+            StartCrouch();
+        }
+
         // compute vertical speed from transform (works without Rigidbody2D)
         float verticalSpeed = 0f;
         if (Time.deltaTime > 0f)
@@ -158,6 +170,10 @@ public class PlayerAnimation : MonoBehaviour
         else if (moving)
         {
             toShow = running ? (run ?? walk ?? idle) : (walk ?? idle);
+        }
+        else if (isChrouching) 
+        {
+            toShow = duck ?? idle;
         }
         else
         {
@@ -251,5 +267,17 @@ public class PlayerAnimation : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
+    }
+
+    void StartCrouch() 
+    {
+        if(isChrouching) { return; }
+        isChrouching = true;
+    }
+
+    void StopCrouch()
+    {
+        if (!isChrouching) { return; };
+        isChrouching = false;
     }
 }

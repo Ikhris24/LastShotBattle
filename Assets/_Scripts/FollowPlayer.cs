@@ -4,6 +4,7 @@ public class FollowPlayer : MonoBehaviour
 {
     [Tooltip("The transform to follow. If null, will try to find object with tag 'Player' on Start.")]
     public Transform target;
+    //public Transform target2;
 
     [Tooltip("Offset from the target (camera usually uses z = -10).")]
     public Vector3 offset = new Vector3(0f, 1f, -10f);
@@ -32,6 +33,7 @@ public class FollowPlayer : MonoBehaviour
         if (target == null) return;
 
         Vector3 desiredPosition = target.position + offset;
+        //Vector3 desiredPosition2 = target2.position + offset;
 
         // apply axis locks
         Vector3 current = transform.position;
