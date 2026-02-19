@@ -53,7 +53,7 @@ public class Controller2D : MonoBehaviour
             velocity.y = jumpForce;
         }
 
-        // Horizontal input (WASD or arrows)
+        // Horizontal input (WASD or arrows)                --------------------------------------
         float x = Input.GetAxisRaw("Horizontal");
         if (Mathf.Approximately(x, 0f))
         {
