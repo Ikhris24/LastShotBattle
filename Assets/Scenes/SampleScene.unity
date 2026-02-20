@@ -296,7 +296,7 @@ MonoBehaviour:
     m_Bits: 64
   idle: {fileID: 1483378833}
   walk: {fileID: 221289990}
-  run: {fileID: 0}
+  run: {fileID: 76925580}
   jump: {fileID: 300653081}
   duck: {fileID: 1055380571}
   attack: {fileID: 249742241}
