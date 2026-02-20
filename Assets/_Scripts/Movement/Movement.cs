@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour
             horizontalMovement = 0f;
         }
 
-        rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
 
 
         //GROUND CHECK
