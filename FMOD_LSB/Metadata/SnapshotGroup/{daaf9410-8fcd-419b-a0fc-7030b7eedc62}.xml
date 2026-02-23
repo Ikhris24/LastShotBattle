@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SnapshotGroup" id="{daaf9410-8fcd-419b-a0fc-7030b7eedc62}">
+		<property name="name">
+			<value>high</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3e85dbdc-e346-4da8-b59f-2f948e739dc5}</destination>
+		</relationship>
+		<relationship name="items">
+			<destination>{41db4fb5-b9be-4706-92c0-0ec75da135ff}</destination>
+			<destination>{120f5176-510b-44ab-85f9-06b4166e789b}</destination>
+			<destination>{de356444-fde3-48e3-8d8f-64507e673abb}</destination>
+		</relationship>
+	</object>
+</objects>
