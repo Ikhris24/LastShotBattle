@@ -2,6 +2,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System;
+using System.Collections;
 
 public class MultiplayerManager : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class MultiplayerManager : MonoBehaviour
     [Header("Players")]
     public Movement playerOne;
     public Movement playerTwo;
+
+    //These are for disabling players movement before round starts.
+    private PlayerInput playerOneInput;
+    private PlayerInput playerTwoInput;
 
     [Header("Spawn Locations")]
     public Transform[] spawnLocations;
@@ -24,9 +30,13 @@ public class MultiplayerManager : MonoBehaviour
     public TextMeshProUGUI playerOneJoinedText;
     public TextMeshProUGUI playerTwoJoinedText;
 
+    [Header("UI")]
+    public TextMeshProUGUI countDownText;
+
     private void Awake()
     {
         instance = this;
+        countDownText.text = "";
     }
 
     //Set Player's one and two to spawn on the left and right of the arena.
@@ -39,6 +49,10 @@ public class MultiplayerManager : MonoBehaviour
         {
             playerOne = playerInput.GetComponent<Movement>();
 
+            //Assign the Input Var to corresponding player, then disable movement. 
+            playerOneInput = playerOne.GetComponent<PlayerInput>();
+            playerOneInput.DeactivateInput();
+
             //Change text on screen to show player 1 joined
             ChangePlayerJoinedText("Player 1", playerOneJoinedText);
         }
@@ -47,12 +61,20 @@ public class MultiplayerManager : MonoBehaviour
         if (spawnLocIndex == 1) 
         { 
             playerTwo = playerInput.GetComponent<Movement>();
+
+            //Assign the Input Var to corresponding player, then disable movement. 
+            playerTwoInput = playerTwo.GetComponent<PlayerInput>();
+            playerTwoInput.DeactivateInput();
+
             playerTwo.FlipSprite(true);
 
             ChangePlayerJoinedText("Player 2", playerTwoJoinedText);
 
             //Then init health bars
-            InitHealthBars(); 
+            InitHealthBars();
+
+            //Then start round
+            StartCoroutine(StartRound());
         }
 
         spawnLocIndex++;
@@ -68,6 +90,34 @@ public class MultiplayerManager : MonoBehaviour
     private void ChangePlayerJoinedText(string playerName, TextMeshProUGUI text)
     {
         text.text = $"{playerName} has joined!";
+    }
+
+
+    IEnumerator StartRound()
+    {
+        //Disable "Player has joined" text
+        playerOneJoinedText.gameObject.SetActive(false);
+        playerTwoJoinedText.gameObject.SetActive(false);
+
+        //Countdown from 5 while also showing timer on screen. 
+        for (int i = 5; i > 0; i--)
+        {
+            countDownText.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+
+        //Show "Go!"
+        countDownText.text = "Go!";
+
+        yield return new WaitForSeconds(1f);
+
+        //Then disable "Go!" text making it empty string. This is due to the same text object being used as the match timer. 
+        countDownText.text = "";
+
+        //Allow players to move.
+        playerOneInput.ActivateInput();
+        playerTwoInput.ActivateInput();
+
     }
 
 }

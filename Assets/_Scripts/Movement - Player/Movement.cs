@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     private float speed = 5f;
     Rigidbody2D rb;
+    private PlayerCombat combat;
 
     //Bools
     private bool movingLeft;
@@ -24,10 +25,6 @@ public class Movement : MonoBehaviour
     [Header("Animator")]
     Animator anim;
 
-    public void InitializeCharacter()
-    {
-
-    }
 
     private void Awake()
     {
@@ -71,13 +68,13 @@ public class Movement : MonoBehaviour
     
     public void FlipSprite(bool faceLeft)
     {
-        // Get the current scale of the object
+        //Get the current scale of the object
         Vector3 scale = transform.localScale;
 
-        // Flip the player based on the direction
+        //Flip the player based on the direction
         if (faceLeft && scale.x > 0f || !faceLeft && scale.x < 0f)
         {
-            // Flip the player horizontally
+            //Flip the player horizontally
             scale.x *= -1f;
             transform.localScale = scale;
         }
@@ -98,10 +95,8 @@ public class Movement : MonoBehaviour
 
     public void OnAttack()
     {
-        //TODO 
-        //For now this will just play the animation, but I'll need to add a seperate function later on that handles the damage
-        //logic and so on. This will be an attack event, which will only call the function at a certain frame of the attack. -logan
-        //-----------------
+        //This function simply plays the animation. 
+        //In the animation theres an animation event that calls the function to give damage. 
 
         anim.SetTrigger("Attack");
     }
