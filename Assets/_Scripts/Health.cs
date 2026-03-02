@@ -10,10 +10,6 @@ public class Health : MonoBehaviour
     [Header("UI")]
     public Image healthBarFill;
 
-    [Header("Debug Settings")]
-    public KeyCode debugDamageKey = KeyCode.H;
-    public float debugDamageAmount = 10f;
-
     void Start()
     {
         currentHealth = maxHealth;
@@ -22,11 +18,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("H PRESSED");
-            TakeDamage(10f);
-        }
+        
     }
 
 
@@ -52,4 +44,6 @@ public class Health : MonoBehaviour
             healthBarFill.fillAmount = currentHealth / maxHealth;
         }
     }
+
+    
 }

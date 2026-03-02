@@ -1,31 +1,60 @@
+using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    // Play Game
-    public void PlayGame()
+    [Header("Buttons")]
+    public Button startGameButton;
+    public Button creditsButton;
+    public Button exitGameButton;
+
+    [SerializeField] private TextMeshProUGUI creditText;
+
+    private void Start()
     {
-        SceneManager.LoadScene(0); // SampleScene
+        creditText.gameObject.SetActive(false);
     }
 
-    // Quit Game
-    public void QuitGame()
+    private void OnEnable()
     {
-        Debug.Log("Quit Game");
-        Application.Quit();
+        startGameButton.onClick.AddListener(StartGame);
+        creditsButton.onClick.AddListener(ShowCredits);
+        exitGameButton.onClick.AddListener(ExitGame);
     }
 
-    // Show Credits
-    public GameObject creditsPanel;
-
-    public void ShowCredits()
+    private void OnDisable()
     {
-        creditsPanel.SetActive(true);
+        startGameButton.onClick.RemoveListener(StartGame);
+        creditsButton.onClick.RemoveListener(ShowCredits);
+        exitGameButton.onClick.RemoveListener(ExitGame);
     }
 
-    public void HideCredits()
+    private void StartGame()
     {
-        creditsPanel.SetActive(false);
+        SceneManager.LoadScene("0");
+    }
+
+    private void ShowCredits()
+    {
+        StartCoroutine(Credits());
+    }
+
+    private void ExitGame()
+    {
+        Environment.Exit(0);
+    }
+
+    //Play Credits Text for 5 Seconds. 
+    IEnumerator Credits()
+    {
+        creditText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        creditText.gameObject.SetActive(false);
     }
 }

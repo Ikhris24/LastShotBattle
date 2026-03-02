@@ -68,7 +68,8 @@ public class Movement : MonoBehaviour
         anim.SetBool("Grounded", grounded);
     }
 
-    private void FlipSprite(bool faceLeft)
+    
+    public void FlipSprite(bool faceLeft)
     {
         // Get the current scale of the object
         Vector3 scale = transform.localScale;
@@ -114,5 +115,8 @@ public class Movement : MonoBehaviour
     {
         movingRight = value.isPressed;
     }
+
+    
+    
 
 }
