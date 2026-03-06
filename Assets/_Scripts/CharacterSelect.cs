@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
-    bool playerOneTurn = true;
+    private bool playerOneTurn = true;
 
     public void SelectCharacter(int characterIndex)
     {
@@ -11,12 +11,12 @@ public class CharacterSelect : MonoBehaviour
         {
             GameManager.player1Character = characterIndex;
             playerOneTurn = false;
-            Debug.Log("Player 1 chose character " + characterIndex);
+            Debug.Log("Player 1 selected character " + characterIndex);
         }
         else
         {
             GameManager.player2Character = characterIndex;
-            Debug.Log("Player 2 chose character " + characterIndex);
+            Debug.Log("Player 2 selected character " + characterIndex);
         }
     }
 
