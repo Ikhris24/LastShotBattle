@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b56b6187-d6ea-4eb0-b70b-013b7320015b}">
+		<property name="assetPath">
+			<value>MB_LSBRec1.3_VO_21926.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3112244897959182</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b35b3eb8-4ba1-4449-b837-34a4dee2a7ae}</destination>
+		</relationship>
+	</object>
+</objects>
