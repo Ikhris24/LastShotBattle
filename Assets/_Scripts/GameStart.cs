@@ -1,34 +1,102 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using TMPro;
 
 public class GameStart : MonoBehaviour
 {
     [Header("Text")]
-
-    public Text roundCall;
-
-    public Text knockOutText;
-
-    public Text playerWinText;
-
-    public Text perfectKnockOutText;
+    public TMP_Text roundCall;
+    public TMP_Text knockOutText;
+    public TMP_Text playerWinText;
+    public TMP_Text perfectKnockOutText;
 
     [Header("Dynamic")]
+    [SerializeField] private int _round = 1;
+    [SerializeField] private int _roundSet = 2; // First to 2 wins
 
-    [SerializeField]private int _round;
+    [SerializeField] private int _player1Wins = 0;
+    [SerializeField] private int _player2Wins = 0;
 
-    [SerializeField]private int _roundSet;
-
-    [SerializeField]private bool _isPlayerWinning;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(StartRound());
     }
 
-    // Update is called once per frame
+    IEnumerator StartRound()
+    {
+        roundCall.gameObject.SetActive(true);
+        roundCall.text = "ROUND " + _round;
+
+        yield return new WaitForSeconds(2f);
+
+        roundCall.text = "FIGHT!";
+
+        yield return new WaitForSeconds(1f);
+
+        roundCall.gameObject.SetActive(false);
+    }
+
+    // Call this when a player wins a round
+    public void EndRound(int winningPlayer)
+    {
+        StartCoroutine(HandleRoundEnd(winningPlayer));
+    }
+
+    IEnumerator HandleRoundEnd(int winningPlayer)
+    {
+        knockOutText.gameObject.SetActive(true);
+        knockOutText.text = "K.O.";
+
+        yield return new WaitForSeconds(2f);
+
+        knockOutText.gameObject.SetActive(false);
+
+        if (winningPlayer == 1)
+        {
+            _player1Wins++;
+        }
+        else if (winningPlayer == 2)
+        {
+            _player2Wins++;
+        }
+
+        // Check if match is over
+        if (_player1Wins >= _roundSet)
+        {
+            ShowWinner(1);
+        }
+        else if (_player2Wins >= _roundSet)
+        {
+            ShowWinner(2);
+        }
+        else
+        {
+            // Next round
+            _round++;
+            StartCoroutine(StartRound());
+        }
+    }
+
+    void ShowWinner(int player)
+    {
+        playerWinText.gameObject.SetActive(true);
+        playerWinText.text = "PLAYER " + player + " WINS!";
+    }
+
     void Update()
     {
-        
+        // Press 1 ? Player 1 wins round
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            EndRound(1);
+        }
+
+        // Press 2 ? Player 2 wins round
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            EndRound(2);
+        }
     }
+
 }
