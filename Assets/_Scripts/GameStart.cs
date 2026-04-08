@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
-
+using FMODUnity;
+using FMOD.Studio;
 public class GameStart : MonoBehaviour
 {
     [Header("Text")]
@@ -18,6 +19,11 @@ public class GameStart : MonoBehaviour
     [SerializeField] private int _player1Wins = 0;
     [SerializeField] private int _player2Wins = 0;
 
+    [Header("FMOD Events")]
+    [SerializeField] private EventReference roundAnnounceEvent;
+    [SerializeField] private EventReference fightAnnounceEvent;
+    [SerializeField] private EventReference playerWinEvent;
+
     void Start()
     {
         StartCoroutine(StartRound());
@@ -27,10 +33,12 @@ public class GameStart : MonoBehaviour
     {
         roundCall.gameObject.SetActive(true);
         roundCall.text = "ROUND " + _round;
+        RuntimeManager.PlayOneShot(roundAnnounceEvent);
 
         yield return new WaitForSeconds(2f);
 
         roundCall.text = "FIGHT!";
+        RuntimeManager.PlayOneShot(fightAnnounceEvent);
 
         yield return new WaitForSeconds(1f);
 
@@ -82,6 +90,8 @@ public class GameStart : MonoBehaviour
     {
         playerWinText.gameObject.SetActive(true);
         playerWinText.text = "PLAYER " + player + " WINS!";
+
+        RuntimeManager.PlayOneShot(playerWinEvent);
     }
 
     void Update()

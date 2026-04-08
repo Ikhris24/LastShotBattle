@@ -1629,6 +1629,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1643,7 +1644,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1792,41 @@ MonoBehaviour:
   _roundSet: 2
   _player1Wins: 0
   _player2Wins: 0
+  roundAnnounceEvent:
+    Guid:
+      Data1: 318551083
+      Data2: 1180947097
+      Data3: -1176237900
+      Data4: 1722690797
+    Path: event:/vo/announcer/Round Prepare
+  fightAnnounceEvent:
+    Guid:
+      Data1: -1263632108
+      Data2: 1216665985
+      Data3: 1830421164
+      Data4: 1283795310
+    Path: event:/vo/announcer/Round Start
+  playerWinEvent:
+    Guid:
+      Data1: -656289845
+      Data2: 1259439367
+      Data3: -1895629950
+      Data4: -1065498488
+    Path: event:/vo/announcer/Round Victory
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 519420028}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
