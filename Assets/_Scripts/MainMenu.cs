@@ -45,7 +45,13 @@ public class MainMenu : MonoBehaviour
 
     private void ExitGame()
     {
-        Environment.Exit(0);
+        Debug.Log("Quit Game");
+
+        Application.Quit();
+
+#if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     //Play Credits Text for 5 Seconds. 
