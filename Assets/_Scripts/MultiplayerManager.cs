@@ -84,7 +84,11 @@ public class MultiplayerManager : MonoBehaviour
     {
         playerOne.GetComponent<Health>().healthBarFill = playerOneHealth;
 
-        playerTwo.GetComponent<Health>().healthBarFill = playerTwoHealth; 
+        playerTwo.GetComponent<Health>().healthBarFill = playerTwoHealth;
+
+        //Because this function runs after both are spawned I will also have it recognize each other
+        playerOne.FindOtherObject();
+        playerTwo.FindOtherObject();
     }
 
     private void ChangePlayerJoinedText(string playerName, TextMeshProUGUI text)

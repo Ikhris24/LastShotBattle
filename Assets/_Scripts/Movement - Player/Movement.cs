@@ -7,13 +7,14 @@ public class Movement : MonoBehaviour
     private float horizontalMovement = 5f;
     [SerializeField] private float jumpForce = 5f;
     private float speed = 5f;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     private PlayerCombat combat;
 
     //Bools
     private bool movingLeft;
     private bool movingRight;
     [SerializeField] private bool grounded;
+    public bool isKnockedBack = false;
 
     //Grounded Check
     [Header("Grounded Check")]
@@ -24,6 +25,10 @@ public class Movement : MonoBehaviour
     //Animator
     [Header("Animator")]
     Animator anim;
+
+    //Enemy
+    public GameObject enemy;
+
 
 
     private void Awake()
@@ -53,7 +58,8 @@ public class Movement : MonoBehaviour
             horizontalMovement = 0f;
         }
 
-        rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
+        
+        if(!isKnockedBack) rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
 
 
         //GROUND CHECK
@@ -80,6 +86,23 @@ public class Movement : MonoBehaviour
         }
     }
 
+    public void FindOtherObject()
+    {
+        Movement[] all = FindObjectsOfType<Movement>();
+
+        foreach (Movement obj in all)
+        {
+            if (obj.gameObject != this.gameObject)
+            {
+                enemy = obj.gameObject;
+
+                Debug.Log("enemy");
+
+                break;
+            }
+        }
+    }
+
     public void OnJump()
     {
         //Ensure player is on the floor before jumping 
@@ -92,6 +115,8 @@ public class Movement : MonoBehaviour
             grounded = false; 
         }
     }
+
+    
 
     public void OnAttack()
     {

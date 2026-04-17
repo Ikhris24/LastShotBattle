@@ -7,6 +7,9 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 1f;
     public LayerMask playerLayers;
 
+    //Movement
+    public Movement player;
+
 
     //This function is called at a certain frame of the attack.
     public void Attack()
