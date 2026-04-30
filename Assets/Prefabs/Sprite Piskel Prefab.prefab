@@ -217,12 +217,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   jumpForce: 5
+  rb: {fileID: 0}
   grounded: 0
+  isKnockedBack: 0
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
   groundCheckPoint: {fileID: 679933743405946621}
   groundCheckSize: {x: 0.5, y: 0.1}
+  enemy: {fileID: 0}
 --- !u!114 &6635125724437386165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +292,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   currentHealth: 0
+  invulernable: 0
+  hurtEvent:
+    Guid:
+      Data1: -1948273426
+      Data2: 1168804794
+      Data3: -1487926850
+      Data4: 218636014
+    Path: event:/char/Player/Hurt
   healthBarFill: {fileID: 0}
 --- !u!114 &5131812224453045612
 MonoBehaviour:
@@ -307,6 +318,7 @@ MonoBehaviour:
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
+  player: {fileID: 0}
 --- !u!1 &9213407947530749588
 GameObject:
   m_ObjectHideFlags: 0

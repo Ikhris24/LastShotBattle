@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using FMOD.Studio;
+using FMODUnity;
 public class Health : MonoBehaviour
 {
     [Header("Health Settings")]
     public float maxHealth = 100f;
     public float currentHealth;
     public bool invulernable = false;
+
+    [Header("FMOD Events")]
+    [SerializeField] private EventReference hurtEvent;
 
     [Header("UI")]
     public Image healthBarFill;
@@ -33,7 +37,7 @@ public class Health : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
-
+        RuntimeManager.PlayOneShot(hurtEvent);
         UpdateHealthBar();
 
         //Take knockback according to other enemies direction
