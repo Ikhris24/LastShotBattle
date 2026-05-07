@@ -11,6 +11,8 @@ public class PausedMenu : MonoBehaviour
     private GameObject pauseMenuInstance;
     public GameObject quitConfirmPanel;
 
+    [SerializeField] private CanvasGroup theCanvasGroup; //this will hide/show the pause menu script if the "Escape" key is pressed 
+
     [Header("Scene Names")]
     public string mainMenuSceneName = "Menu";
     public string characterSelectSceneName = "CharacterSelect"; // Add this
@@ -36,7 +38,7 @@ public class PausedMenu : MonoBehaviour
             // Automatically connect buttons
             SetupButtons();
         }
-
+        theCanvasGroup.alpha = 1f; // reveals the pause menu
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -89,6 +91,7 @@ public class PausedMenu : MonoBehaviour
             pauseMenuInstance = null;
         }
 
+        theCanvasGroup.alpha = 0f; // hides the pause menu
         Time.timeScale = 1f;
         isPaused = false;
     }
