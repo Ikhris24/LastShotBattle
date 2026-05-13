@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 407c7c054ddf7e548865377236a4bf5f
+guid: 1033d43b9c9e07f4890e0c08169cbf20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6348231638746000831
-    second: Sprite Piskel DP_0
+      213: -6344859103678021018
+    second: Sprite Piskel Air Shoot_0
   - first:
-      213: -2370496150886886242
-    second: Sprite Piskel DP_1
+      213: 4499368059526527380
+    second: Sprite Piskel Air Shoot_1
   - first:
-      213: 6712164497004002698
-    second: Sprite Piskel DP_2
-  - first:
-      213: 4086693111181314826
-    second: Sprite Piskel DP_3
-  - first:
-      213: -7257899443323461511
-    second: Sprite Piskel DP_4
+      213: -1671983278965289260
+    second: Sprite Piskel Air Shoot_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,12 +106,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite Piskel DP_0
+      name: Sprite Piskel Air Shoot_0
       rect:
         serializedVersion: 2
-        x: 35
+        x: 53
         y: 191
-        width: 92
+        width: 74
         height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -127,19 +121,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbde9538a03791850800000000000000
-      internalID: 6348231638746000831
+      spriteID: 6624e5ff24882f7a0800000000000000
+      internalID: -6344859103678021018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite Piskel DP_1
+      name: Sprite Piskel Air Shoot_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 245
+        y: 191
+        width: 122
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49931d55967f07e30800000000000000
+      internalID: 4499368059526527380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Piskel Air Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 53
         y: 0
-        width: 98
+        width: 122
         height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -149,74 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e94d4f86f4e4a1fd0800000000000000
-      internalID: -2370496150886886242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite Piskel DP_2
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 149
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8d79e52c06662d50800000000000000
-      internalID: 6712164497004002698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite Piskel DP_3
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 149
-        width: 8
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0b8ffd7bb9d6b830800000000000000
-      internalID: 4086693111181314826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite Piskel DP_4
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 149
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 970233909e2c64b90800000000000000
-      internalID: -7257899443323461511
+      spriteID: 4de81eaf01cebc8e0800000000000000
+      internalID: -1671983278965289260
       vertices: []
       indices: 
       edges: []
@@ -235,11 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite Piskel DP_0: 6348231638746000831
-      Sprite Piskel DP_1: -2370496150886886242
-      Sprite Piskel DP_2: 6712164497004002698
-      Sprite Piskel DP_3: 4086693111181314826
-      Sprite Piskel DP_4: -7257899443323461511
+      Sprite Piskel Air Shoot_0: -6344859103678021018
+      Sprite Piskel Air Shoot_1: 4499368059526527380
+      Sprite Piskel Air Shoot_2: -1671983278965289260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

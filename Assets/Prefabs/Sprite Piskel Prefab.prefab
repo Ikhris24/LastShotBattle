@@ -225,7 +225,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckPoint: {fileID: 679933743405946621}
   groundCheckSize: {x: 0.5, y: 0.1}
-  enemy: {fileID: 0}
+  enemy: {fileID: 5455540067694295125}
 --- !u!114 &6635125724437386165
 MonoBehaviour:
   m_ObjectHideFlags: 0
