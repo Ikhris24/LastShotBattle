@@ -129,6 +129,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Attack 2"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab2372c0-eaaf-4162-8e2d-047e190735a9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack 3"",
+                    ""type"": ""Button"",
+                    ""id"": ""13bee970-92c8-4e3c-83ba-da44eb726066"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Debug"",
                     ""type"": ""Button"",
                     ""id"": ""ae69f0b6-03a3-4b71-ac3a-a2b100cfd3df"",
@@ -172,8 +190,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bee7e215-885e-4798-b730-6813af465be7"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""a049c2d7-0cb5-40ab-91f6-82c736e74883"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -238,17 +256,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f411062e-44c7-42cf-817a-6e2b2a3227d6"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""98761cfd-ba4e-4cb1-95f0-5a659c1b3303"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
@@ -290,6 +297,50 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4131739-ee3b-476f-8f36-f0d8978e57ea"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27995ea2-43d3-45ee-bace-5adb6b9d07d2"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c804e3c-b703-49af-b6a2-dffa441d2fcd"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c5bf76f-35ca-4f39-925e-8ae32ef05885"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -302,6 +353,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Controller_Right = m_Controller.FindAction("Right", throwIfNotFound: true);
         m_Controller_Left = m_Controller.FindAction("Left", throwIfNotFound: true);
         m_Controller_Attack = m_Controller.FindAction("Attack", throwIfNotFound: true);
+        m_Controller_Attack2 = m_Controller.FindAction("Attack 2", throwIfNotFound: true);
+        m_Controller_Attack3 = m_Controller.FindAction("Attack 3", throwIfNotFound: true);
         m_Controller_Debug = m_Controller.FindAction("Debug", throwIfNotFound: true);
         m_Controller_Pause = m_Controller.FindAction("Pause", throwIfNotFound: true);
     }
@@ -388,6 +441,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controller_Right;
     private readonly InputAction m_Controller_Left;
     private readonly InputAction m_Controller_Attack;
+    private readonly InputAction m_Controller_Attack2;
+    private readonly InputAction m_Controller_Attack3;
     private readonly InputAction m_Controller_Debug;
     private readonly InputAction m_Controller_Pause;
     /// <summary>
@@ -417,6 +472,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Controller/Attack".
         /// </summary>
         public InputAction @Attack => m_Wrapper.m_Controller_Attack;
+        /// <summary>
+        /// Provides access to the underlying input action "Controller/Attack2".
+        /// </summary>
+        public InputAction @Attack2 => m_Wrapper.m_Controller_Attack2;
+        /// <summary>
+        /// Provides access to the underlying input action "Controller/Attack3".
+        /// </summary>
+        public InputAction @Attack3 => m_Wrapper.m_Controller_Attack3;
         /// <summary>
         /// Provides access to the underlying input action "Controller/Debug".
         /// </summary>
@@ -463,6 +526,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Attack2.started += instance.OnAttack2;
+            @Attack2.performed += instance.OnAttack2;
+            @Attack2.canceled += instance.OnAttack2;
+            @Attack3.started += instance.OnAttack3;
+            @Attack3.performed += instance.OnAttack3;
+            @Attack3.canceled += instance.OnAttack3;
             @Debug.started += instance.OnDebug;
             @Debug.performed += instance.OnDebug;
             @Debug.canceled += instance.OnDebug;
@@ -492,6 +561,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Attack2.started -= instance.OnAttack2;
+            @Attack2.performed -= instance.OnAttack2;
+            @Attack2.canceled -= instance.OnAttack2;
+            @Attack3.started -= instance.OnAttack3;
+            @Attack3.performed -= instance.OnAttack3;
+            @Attack3.canceled -= instance.OnAttack3;
             @Debug.started -= instance.OnDebug;
             @Debug.performed -= instance.OnDebug;
             @Debug.canceled -= instance.OnDebug;
@@ -566,6 +641,20 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Attack 2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAttack2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Attack 3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAttack3(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Debug" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

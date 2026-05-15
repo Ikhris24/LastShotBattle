@@ -293,6 +293,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   invulernable: 0
+  playerNumber: 1
   hurtEvent:
     Guid:
       Data1: -1948273426
@@ -319,6 +320,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   player: {fileID: 0}
+  enemyTag: 
 --- !u!1 &9213407947530749588
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,6 +43,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Attack 2",
+                    "type": "Button",
+                    "id": "ab2372c0-eaaf-4162-8e2d-047e190735a9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack 3",
+                    "type": "Button",
+                    "id": "13bee970-92c8-4e3c-83ba-da44eb726066",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Debug",
                     "type": "Button",
                     "id": "ae69f0b6-03a3-4b71-ac3a-a2b100cfd3df",
@@ -86,8 +104,8 @@
                 },
                 {
                     "name": "",
-                    "id": "bee7e215-885e-4798-b730-6813af465be7",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "a049c2d7-0cb5-40ab-91f6-82c736e74883",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -152,17 +170,6 @@
                 },
                 {
                     "name": "",
-                    "id": "f411062e-44c7-42cf-817a-6e2b2a3227d6",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "98761cfd-ba4e-4cb1-95f0-5a659c1b3303",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -202,6 +209,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4131739-ee3b-476f-8f36-f0d8978e57ea",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack 2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27995ea2-43d3-45ee-bace-5adb6b9d07d2",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack 2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c804e3c-b703-49af-b6a2-dffa441d2fcd",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack 3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c5bf76f-35ca-4f39-925e-8ae32ef05885",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack 3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

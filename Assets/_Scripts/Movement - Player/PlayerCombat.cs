@@ -11,26 +11,24 @@ public class PlayerCombat : MonoBehaviour
     public Movement player;
 
     // This function is called during the attack animation
-    public string enemyTag;
-
+    //public string enemyTag;
     public void Attack()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            attackPoint.position,
-            attackRange,
-            playerLayers);
+        Collider2D[] hitPlayeres = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
 
-        foreach (Collider2D target in hits)
+        foreach (Collider2D player in hitPlayeres)
         {
-            // ONLY hit enemy
-            if (!target.CompareTag(enemyTag))
-                continue;
-
-            Health health = target.GetComponent<Health>();
-
-            if (health != null)
-            {
-                health.TakeDamage(10);
-            }
+            player.GetComponent<Health>().TakeDamage(10);
         }
     }
+
+    //This is purely for showing off the circle of the player attack range in the Scene view. 
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+}
