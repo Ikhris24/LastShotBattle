@@ -11,17 +11,18 @@ public class PlayerCombat : MonoBehaviour
     public Movement player;
 
     // This function is called during the attack animation
+    public string enemyTag;
+
     public void Attack()
     {
-        Collider2D[] hitPlayers =
-            Physics2D.OverlapCircleAll(
-                attackPoint.position,
-                attackRange,
-                playerLayers);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            attackRange,
+            playerLayers);
 
-        foreach (Collider2D target in hitPlayers)
+        foreach (Collider2D target in hits)
         {
-            // Only hit the enemy
+            // ONLY hit enemy
             if (!target.CompareTag(enemyTag))
                 continue;
 
@@ -33,4 +34,3 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-}
