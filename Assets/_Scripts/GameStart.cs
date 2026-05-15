@@ -19,6 +19,12 @@ public class GameStart : MonoBehaviour
     [SerializeField] private int _player1Wins = 0;
     [SerializeField] private int _player2Wins = 0;
 
+    [Header("Player Health")]
+    public Health1 player1Health;
+    public Health2 player2Health;
+
+    private bool roundOver = false;
+
     [Header("FMOD Events")]
     [SerializeField] private EventReference roundAnnounceEvent;
     [SerializeField] private EventReference fightAnnounceEvent;
@@ -82,7 +88,17 @@ public class GameStart : MonoBehaviour
         {
             // Next round
             _round++;
-            StartCoroutine(StartRound());
+
+            // Reset health
+            player1Health.currentHealth = player1Health.maxHealth;
+            player1Health.SendMessage("UpdateHealthBar");
+
+            player2Health.currentHealth = player2Health.maxHealth;
+            player2Health.SendMessage("UpdateHealthBar");
+
+            roundOver = false;
+
+            StartCoroutine(StartRound());w
         }
     }
 
@@ -96,15 +112,34 @@ public class GameStart : MonoBehaviour
 
     void Update()
     {
-        // Press 1 ? Player 1 wins round
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        // Prevent multiple round endings
+        if (roundOver)
+            return;
+
+        // Player 1 lost
+        if (player1Health.currentHealth <= 0)
         {
+            roundOver = true;
+            EndRound(2);
+        }
+
+        // Player 2 lost
+        else if (player2Health.currentHealth <= 0)
+        {
+            roundOver = true;
             EndRound(1);
         }
 
-        // Press 2 ? Player 2 wins round
+        // Debug Keys
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            roundOver = true;
+            EndRound(1);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            roundOver = true;
             EndRound(2);
         }
     }
