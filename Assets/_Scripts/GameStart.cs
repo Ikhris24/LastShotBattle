@@ -20,8 +20,8 @@ public class GameStart : MonoBehaviour
     [SerializeField] private int _player2Wins = 0;
 
     [Header("Player Health")]
-    public Health1 player1Health;
-    public Health2 player2Health;
+    public Health player1Health;
+    public Health player2Health;
 
     private bool roundOver = false;
 
@@ -90,11 +90,8 @@ public class GameStart : MonoBehaviour
             _round++;
 
             // Reset health
-            player1Health.currentHealth = player1Health.maxHealth;
-            player1Health.SendMessage("UpdateHealthBar");
-
-            player2Health.currentHealth = player2Health.maxHealth;
-            player2Health.SendMessage("UpdateHealthBar");
+            player1Health.ResetHealth();
+            player2Health.ResetHealth();
 
             roundOver = false;
 
@@ -112,34 +109,14 @@ public class GameStart : MonoBehaviour
 
     void Update()
     {
-        // Prevent multiple round endings
-        if (roundOver)
-            return;
-
-        // Player 1 lost
-        if (player1Health.currentHealth <= 0)
-        {
-            roundOver = true;
-            EndRound(2);
-        }
-
-        // Player 2 lost
-        else if (player2Health.currentHealth <= 0)
-        {
-            roundOver = true;
-            EndRound(1);
-        }
-
         // Debug Keys
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            roundOver = true;
             EndRound(1);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            roundOver = true;
             EndRound(2);
         }
     }
