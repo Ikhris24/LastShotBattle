@@ -95,7 +95,7 @@ public class GameStart : MonoBehaviour
 
             roundOver = false;
 
-            StartCoroutine(StartRound());w
+            StartCoroutine(StartRound());
         }
     }
 
