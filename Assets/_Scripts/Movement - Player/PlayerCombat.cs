@@ -2,34 +2,44 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    //Attack
+    [Header("Attack")]
     public Transform attackPoint;
     public float attackRange = 1f;
     public LayerMask playerLayers;
 
-    //Movement
+    [Header("Player")]
     public Movement player;
 
-
-    //This function is called at a certain frame of the attack.
+    // This function is called during the attack animation
     public void Attack()
     {
-        Collider2D[] hitPlayeres = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+        Collider2D[] hitPlayers =
+            Physics2D.OverlapCircleAll(
+                attackPoint.position,
+                attackRange,
+                playerLayers);
 
-        foreach(Collider2D player in  hitPlayeres)
+        foreach (Collider2D target in hitPlayers)
         {
-            player.GetComponent<Health>().TakeDamage(10);
+            // Prevent hitting yourself
+            if (target.gameObject == gameObject)
+                continue;
+
+            Health health = target.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.TakeDamage(10);
+            }
         }
     }
 
-
-    //This is purely for showing off the circle of the player attack range in the Scene view. 
+    // Draw attack range in Scene view
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
-        {
             return;
-        }
+
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
