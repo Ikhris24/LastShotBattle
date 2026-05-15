@@ -21,8 +21,8 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D target in hitPlayers)
         {
-            // Prevent hitting yourself
-            if (target.gameObject == gameObject)
+            // Only hit the enemy
+            if (!target.CompareTag(enemyTag))
                 continue;
 
             Health health = target.GetComponent<Health>();
@@ -32,14 +32,5 @@ public class PlayerCombat : MonoBehaviour
                 health.TakeDamage(10);
             }
         }
-    }
-
-    // Draw attack range in Scene view
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-            return;
-
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
