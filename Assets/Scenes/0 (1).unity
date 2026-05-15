@@ -1522,10 +1522,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -8852995704630408839, guid: 473bba12a0346914ab0b564ee8937f79, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -2026,6 +2026,8 @@ MonoBehaviour:
   _roundSet: 2
   _player1Wins: 0
   _player2Wins: 0
+  player1Health: {fileID: 1782286524356814059, guid: 6770ade3a2284624f9e8389894a0a445, type: 3}
+  player2Health: {fileID: 1782286524356814059, guid: 6770ade3a2284624f9e8389894a0a445, type: 3}
   roundAnnounceEvent:
     Guid:
       Data1: 318551083
@@ -3821,13 +3823,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -8852995704630408839, guid: 473bba12a0346914ab0b564ee8937f79, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1338778592
