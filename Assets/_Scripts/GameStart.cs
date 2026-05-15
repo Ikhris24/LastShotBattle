@@ -4,6 +4,7 @@ using System.Collections;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
+
 public class GameStart : MonoBehaviour
 {
     [Header("Text")]
@@ -38,12 +39,15 @@ public class GameStart : MonoBehaviour
     IEnumerator StartRound()
     {
         roundCall.gameObject.SetActive(true);
+
         roundCall.text = "ROUND " + _round;
+
         RuntimeManager.PlayOneShot(roundAnnounceEvent);
 
         yield return new WaitForSeconds(2f);
 
         roundCall.text = "FIGHT!";
+
         RuntimeManager.PlayOneShot(fightAnnounceEvent);
 
         yield return new WaitForSeconds(1f);
@@ -54,6 +58,12 @@ public class GameStart : MonoBehaviour
     // Call this when a player wins a round
     public void EndRound(int winningPlayer)
     {
+        // Prevent multiple round endings
+        if (roundOver)
+            return;
+
+        roundOver = true;
+
         StartCoroutine(HandleRoundEnd(winningPlayer));
     }
 
@@ -66,6 +76,7 @@ public class GameStart : MonoBehaviour
 
         knockOutText.gameObject.SetActive(false);
 
+        // Add win to correct player
         if (winningPlayer == 1)
         {
             _player1Wins++;
@@ -75,7 +86,7 @@ public class GameStart : MonoBehaviour
             _player2Wins++;
         }
 
-        // Check if match is over
+        // Match Over
         if (_player1Wins >= _roundSet)
         {
             ShowWinner(1);
@@ -86,22 +97,25 @@ public class GameStart : MonoBehaviour
         }
         else
         {
-            // Next round
+            // Next Round
             _round++;
 
-            // Reset health
+            // Reset player health
             player1Health.ResetHealth();
             player2Health.ResetHealth();
 
+            yield return new WaitForSeconds(1f);
+
             roundOver = false;
 
-            StartCoroutine(StartRound());w
+            StartCoroutine(StartRound());
         }
     }
 
     void ShowWinner(int player)
     {
         playerWinText.gameObject.SetActive(true);
+
         playerWinText.text = "PLAYER " + player + " WINS!";
 
         RuntimeManager.PlayOneShot(playerWinEvent);
@@ -110,15 +124,17 @@ public class GameStart : MonoBehaviour
     void Update()
     {
         // Debug Keys
+
+        // Player 1 wins round
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             EndRound(1);
         }
 
+        // Player 2 wins round
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             EndRound(2);
         }
     }
-
 }
