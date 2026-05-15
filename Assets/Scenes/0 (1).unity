@@ -3479,6 +3479,27 @@ MonoBehaviour:
   playerOneJoinedText: {fileID: 1224029748}
   playerTwoJoinedText: {fileID: 68546008}
   countDownText: {fileID: 1969795069}
+  roundAnnounceEvent:
+    Guid:
+      Data1: 318551083
+      Data2: 1180947097
+      Data3: -1176237900
+      Data4: 1722690797
+    Path: event:/vo/announcer/Round Prepare
+  fightAnnounceEvent:
+    Guid:
+      Data1: -1263632108
+      Data2: 1216665985
+      Data3: 1830421164
+      Data4: 1283795310
+    Path: event:/vo/announcer/Round Start
+  playerWinEvent:
+    Guid:
+      Data1: -656289845
+      Data2: 1259439367
+      Data3: -1895629950
+      Data4: -1065498488
+    Path: event:/vo/announcer/Round Victory
 --- !u!114 &1505172001
 MonoBehaviour:
   m_ObjectHideFlags: 0
