@@ -11,37 +11,87 @@ public class PausedMenu : MonoBehaviour
     private GameObject pauseMenuInstance;
     public GameObject quitConfirmPanel;
 
-    [SerializeField] private CanvasGroup theCanvasGroup; //this will hide/show the pause menu script if the "Escape" key is pressed 
+    [SerializeField] private CanvasGroup theCanvasGroup; //this will hide/show the pause menu script if the "Escape" key is pressed
 
     [Header("Scene Names")]
     public string mainMenuSceneName = "Menu";
     public string characterSelectSceneName = "CharacterSelect"; // Add this
 
-    void Update()
+
+void Start()
+{
+    string currentScene = SceneManager.GetActiveScene().name;
+
+    // Disable this script on menu scenes
+    if (currentScene == mainMenuSceneName ||
+        currentScene == characterSelectSceneName)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-                ResumeGame();
-            else
-                PauseGame();
-        }
+        enabled = false;
+        return;
     }
 
-    public void PauseGame()
+    Time.timeScale = 1f;
+    isPaused = false;
+}
+void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Escape))
     {
-        if (pauseMenuPrefab != null && pauseMenuInstance == null)
-        {
-            // Instantiate the pause menu Canvas
-            pauseMenuInstance = Instantiate(pauseMenuPrefab);
-
-            // Automatically connect buttons
-            SetupButtons();
-        }
-        theCanvasGroup.alpha = 1f; // reveals the pause menu
-        Time.timeScale = 0f;
-        isPaused = true;
+        if (isPaused)
+            ResumeGame();
+        else
+            PauseGame();
     }
+}
+
+//bool CanPause() //If you have a bool called isPaused, why do you need another one that checks to see if it is paused?
+//{
+//    string currentScene = SceneManager.GetActiveScene().name;
+
+//    return currentScene != mainMenuSceneName &&
+//           currentScene != characterSelectSceneName;
+//}
+void OnEnable()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+void OnDisable()
+{
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+}
+
+void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    bool isMenuScene =
+        scene.name == mainMenuSceneName ||
+        scene.name == characterSelectSceneName;
+
+    enabled = !isMenuScene;
+
+    if (isMenuScene)
+    {
+        ResumeGame();
+    }
+}
+
+public void PauseGame()
+{
+    //if (!CanPause())
+    //    return;
+
+    if (pauseMenuPrefab != null && pauseMenuInstance == null)
+    {
+       theCanvasGroup.alpha = 1f; // reveals the pause menu
+
+        pauseMenuInstance = Instantiate(pauseMenuPrefab);
+        SetupButtons();
+    }
+
+    Time.timeScale = 0f;
+    isPaused = true;
+}
+
 
     void SetupButtons()
     {
@@ -92,6 +142,7 @@ public class PausedMenu : MonoBehaviour
         }
 
         theCanvasGroup.alpha = 0f; // hides the pause menu
+
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -127,50 +178,48 @@ public class PausedMenu : MonoBehaviour
             Destroy(player);
         }
 
-        // Also find and destroy any objects with the name "Player_1" or "Player_2"
-        GameObject player1 = GameObject.Find("Player_1");
-        if (player1 != null) Destroy(player1);
-        
-        GameObject player2 = GameObject.Find("Player_2");
-        if (player2 != null) Destroy(player2);
     }
 
     public void QuitGame()
     {
-        // Show confirmation panel instead of quitting immediately
-        if (quitConfirmPanel != null)
-        {
-            quitConfirmPanel.SetActive(true);
-            if (pauseMenuInstance != null)
-            {
-                pauseMenuInstance.SetActive(false);
-            }
-        }
-        else
-        {
-            QuitConfirmed();
-        }
+        //// Show confirmation panel instead of quitting immediately
+        //if (quitConfirmPanel != null)
+        //{
+        //    quitConfirmPanel.SetActive(true);
+        //    if (pauseMenuInstance != null)
+        //    {
+        //        pauseMenuInstance.SetActive(false);
+        //    }
+        //}
+        //else
+        //{
+        //    QuitConfirmed();
+        //}
+
+        SceneManager.LoadScene("Menu");
     }
 
-    public void QuitConfirmed()
-    {
+    //public void QuitConfirmed()
+    //{
 
-        Time.timeScale = 1f;
+    //    //Time.timeScale = 1f;
         
-        #if UNITY_EDITOR
-            // If we're in the Unity Editor, stop playing
-            UnityEditor.EditorApplication.isPlaying = false;
-        #elif UNITY_WEBGL
-            // WebGL doesn't support Application.Quit()
-            Debug.Log("Game Quit - But WebGL doesn't support quitting");
-            // You might want to redirect or show a message for WebGL
-        #else
-            // For standalone builds (Windows, Mac, Linux)
-            Application.Quit();
-        #endif
+    //    //#if UNITY_EDITOR
+    //    //    // If we're in the Unity Editor, stop playing
+    //    //    UnityEditor.EditorApplication.isPlaying = false;
+    //    //#elif UNITY_WEBGL
+    //    //    // WebGL doesn't support Application.Quit()
+    //    //    Debug.Log("Game Quit - But WebGL doesn't support quitting");
+    //    //    // You might want to redirect or show a message for WebGL
+    //    //#else
+    //    //    // For standalone builds (Windows, Mac, Linux)
+    //    //    Application.Quit();
+    //    //#endif
+
+
         
-        Debug.Log("Game Quit");
-    }
+    //    Debug.Log("Game Quit");
+    //}
 
     public void CancelQuit()
     {
