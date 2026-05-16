@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System;
 using System.Collections;
-
+using FMODUnity;
+using FMOD.Studio;
 public class MultiplayerManager : MonoBehaviour
 {
     //Singleton
@@ -33,6 +34,10 @@ public class MultiplayerManager : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI countDownText;
 
+    [Header("FMOD Events")]
+    [SerializeField] private EventReference roundAnnounceEvent;
+    [SerializeField] private EventReference fightAnnounceEvent;
+    
     private void Awake()
     {
         instance = this;
@@ -102,7 +107,7 @@ public class MultiplayerManager : MonoBehaviour
         //Disable "Player has joined" text
         playerOneJoinedText.gameObject.SetActive(false);
         playerTwoJoinedText.gameObject.SetActive(false);
-
+        RuntimeManager.PlayOneShot(roundAnnounceEvent);
         //Countdown from 5 while also showing timer on screen. 
         for (int i = 5; i > 0; i--)
         {
@@ -112,7 +117,7 @@ public class MultiplayerManager : MonoBehaviour
 
         //Show "Go!"
         countDownText.text = "Go!";
-
+        RuntimeManager.PlayOneShot(fightAnnounceEvent);
         yield return new WaitForSeconds(1f);
 
         //Then disable "Go!" text making it empty string. This is due to the same text object being used as the match timer. 

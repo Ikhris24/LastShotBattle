@@ -20,12 +20,6 @@ public class GameStart : MonoBehaviour
     [SerializeField] private int _player1Wins = 0;
     [SerializeField] private int _player2Wins = 0;
 
-    [Header("Player Health")]
-    public Health player1Health;
-    public Health player2Health;
-
-    private bool roundOver = false;
-
     [Header("FMOD Events")]
     [SerializeField] private EventReference roundAnnounceEvent;
     [SerializeField] private EventReference fightAnnounceEvent;
@@ -39,15 +33,12 @@ public class GameStart : MonoBehaviour
     IEnumerator StartRound()
     {
         roundCall.gameObject.SetActive(true);
-
         roundCall.text = "ROUND " + _round;
-
         RuntimeManager.PlayOneShot(roundAnnounceEvent);
 
         yield return new WaitForSeconds(2f);
 
         roundCall.text = "FIGHT!";
-
         RuntimeManager.PlayOneShot(fightAnnounceEvent);
 
         yield return new WaitForSeconds(1f);
@@ -58,12 +49,6 @@ public class GameStart : MonoBehaviour
     // Call this when a player wins a round
     public void EndRound(int winningPlayer)
     {
-        // Prevent multiple round endings
-        if (roundOver)
-            return;
-
-        roundOver = true;
-
         StartCoroutine(HandleRoundEnd(winningPlayer));
     }
 
@@ -76,7 +61,6 @@ public class GameStart : MonoBehaviour
 
         knockOutText.gameObject.SetActive(false);
 
-        // Add win to correct player
         if (winningPlayer == 1)
         {
             _player1Wins++;
@@ -86,7 +70,7 @@ public class GameStart : MonoBehaviour
             _player2Wins++;
         }
 
-        // Match Over
+        // Check if match is over
         if (_player1Wins >= _roundSet)
         {
             ShowWinner(1);
@@ -97,17 +81,8 @@ public class GameStart : MonoBehaviour
         }
         else
         {
-            // Next Round
+            // Next round
             _round++;
-
-            // Reset player health
-            player1Health.ResetHealth();
-            player2Health.ResetHealth();
-
-            yield return new WaitForSeconds(1f);
-
-            roundOver = false;
-
             StartCoroutine(StartRound());
         }
     }
@@ -115,7 +90,6 @@ public class GameStart : MonoBehaviour
     void ShowWinner(int player)
     {
         playerWinText.gameObject.SetActive(true);
-
         playerWinText.text = "PLAYER " + player + " WINS!";
 
         RuntimeManager.PlayOneShot(playerWinEvent);
@@ -123,15 +97,13 @@ public class GameStart : MonoBehaviour
 
     void Update()
     {
-        // Debug Keys
-
-        // Player 1 wins round
+        // Press 1 ? Player 1 wins round
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             EndRound(1);
         }
 
-        // Player 2 wins round
+        // Press 2 ? Player 2 wins round
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             EndRound(2);

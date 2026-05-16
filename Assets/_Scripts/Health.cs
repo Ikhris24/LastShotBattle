@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
 
     [Header("FMOD Events")]
     [SerializeField] private EventReference hurtEvent;
-
+    [SerializeField] private EventReference playerWinEvent;
     [Header("UI")]
     public Image healthBarFill;
 
@@ -58,10 +58,12 @@ public class Health : MonoBehaviour
         {
             if (playerNumber == 1)
             {
+                RuntimeManager.PlayOneShot(playerWinEvent);
                 gameStart.EndRound(2);
             }
             else
             {
+                RuntimeManager.PlayOneShot(playerWinEvent);
                 gameStart.EndRound(1);
             }
         }
