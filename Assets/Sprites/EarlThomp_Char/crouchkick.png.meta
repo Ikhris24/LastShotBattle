@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: c549195874d64894ebfac26eda2711fb
+guid: 2acf82c22c4e8c34f83eb0a4a3e3ea56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7621969135454868599
-    second: CrouchAnimSprite_0
+      213: -4458401988802041324
+    second: crouchkick_0
   - first:
-      213: -782973717827615842
-    second: CrouchAnimSprite_1
+      213: -3061939528094172884
+    second: crouchkick_1
   - first:
-      213: 7756521115275216512
-    second: CrouchAnimSprite_2
+      213: 2934648440769497066
+    second: crouchkick_2
   - first:
-      213: -1938889021112103296
-    second: CrouchAnimSprite_3
+      213: 7485909098268832184
+    second: crouchkick_3
   - first:
-      213: 184115114432472315
-    second: CrouchAnimSprite_4
+      213: 326602780716195796
+    second: crouchkick_4
+  - first:
+      213: -4017286377507006284
+    second: crouchkick_5
+  - first:
+      213: -5253267280786570676
+    second: crouchkick_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 35
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +118,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CrouchAnimSprite_0
+      name: crouchkick_0
       rect:
         serializedVersion: 2
-        x: 32
+        x: 18
         y: 0
-        width: 49
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98ba8384473593690800000000000000
-      internalID: -7621969135454868599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CrouchAnimSprite_1
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 0
-        width: 47
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e930b605d815225f0800000000000000
-      internalID: -782973717827615842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CrouchAnimSprite_2
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 0
-        width: 55
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 086cbc8cbd2b4ab60800000000000000
-      internalID: 7756521115275216512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CrouchAnimSprite_3
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08e45bd35bea715e0800000000000000
-      internalID: -1938889021112103296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CrouchAnimSprite_4
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 0
-        width: 49
+        width: 82
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf4278998bb1e8200800000000000000
-      internalID: 184115114432472315
+      spriteID: 41a2f8743039022c0800000000000000
+      internalID: -4458401988802041324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 57
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c293838d83ec185d0800000000000000
+      internalID: -3061939528094172884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae748bc5537f9b820800000000000000
+      internalID: 2934648440769497066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_3
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 53
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1bd2fa9aa43e760800000000000000
+      internalID: 7485909098268832184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_4
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 0
+        width: 86
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df5e37af73588400800000000000000
+      internalID: 326602780716195796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_5
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 0
+        width: 53
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8ddabf25bbf38c0800000000000000
+      internalID: -4017286377507006284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouchkick_6
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 0
+        width: 39
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42c88abd35a817b0800000000000000
+      internalID: -5253267280786570676
       vertices: []
       indices: 
       edges: []
@@ -225,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df58097f511e1e645bf645764db112e1
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CrouchAnimSprite_0: -7621969135454868599
-      CrouchAnimSprite_1: -782973717827615842
-      CrouchAnimSprite_2: 7756521115275216512
-      CrouchAnimSprite_3: -1938889021112103296
-      CrouchAnimSprite_4: 184115114432472315
+      crouchkick_0: -4458401988802041324
+      crouchkick_1: -3061939528094172884
+      crouchkick_2: 2934648440769497066
+      crouchkick_3: 7485909098268832184
+      crouchkick_4: 326602780716195796
+      crouchkick_5: -4017286377507006284
+      crouchkick_6: -5253267280786570676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

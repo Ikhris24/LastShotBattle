@@ -1,100 +1,100 @@
 fileFormatVersion: 2
-guid: e2b5a260de9549546b876faca45b8530
+guid: cb4ae0a62aae9b44b9304f3d55e42a49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7260703758766112572
-    second: LSB_Logo_0
+      213: 4924380092060168814
+    second: LSB_Logo_02_0
   - first:
-      213: -4535482616500009998
-    second: LSB_Logo_1
+      213: 6804947017943099119
+    second: LSB_Logo_02_1
   - first:
-      213: 2796444052790719902
-    second: LSB_Logo_2
+      213: 5330620869424603385
+    second: LSB_Logo_02_2
   - first:
-      213: -3892525211849730897
-    second: LSB_Logo_3
+      213: -4155969620231092071
+    second: LSB_Logo_02_3
   - first:
-      213: -8188474951485333642
-    second: LSB_Logo_4
+      213: -5105367740312724475
+    second: LSB_Logo_02_4
   - first:
-      213: 1294584718682586449
-    second: LSB_Logo_5
+      213: 7731746266307306469
+    second: LSB_Logo_02_5
   - first:
-      213: 8294181747636866558
-    second: LSB_Logo_6
+      213: -3886255121250021886
+    second: LSB_Logo_02_6
   - first:
-      213: 1765984186448024713
-    second: LSB_Logo_7
+      213: 8603589759680025549
+    second: LSB_Logo_02_7
   - first:
-      213: -2073182585327271891
-    second: LSB_Logo_8
+      213: -7916624266029501347
+    second: LSB_Logo_02_8
   - first:
-      213: -3212901264819357659
-    second: LSB_Logo_9
+      213: -4011979095967419857
+    second: LSB_Logo_02_9
   - first:
-      213: 8513793186629362502
-    second: LSB_Logo_10
+      213: 7541787478500928750
+    second: LSB_Logo_02_10
   - first:
-      213: -6071323167046822698
-    second: LSB_Logo_11
+      213: -3562362914589307993
+    second: LSB_Logo_02_11
   - first:
-      213: -8433308737043041494
-    second: LSB_Logo_12
+      213: -1017346198878919851
+    second: LSB_Logo_02_12
   - first:
-      213: -6715993889002369381
-    second: LSB_Logo_13
+      213: -4772077967925409884
+    second: LSB_Logo_02_13
   - first:
-      213: 6234768700645269189
-    second: LSB_Logo_14
+      213: -1913049111884166998
+    second: LSB_Logo_02_14
   - first:
-      213: 7169316092189749760
-    second: LSB_Logo_15
+      213: 4143182820137162907
+    second: LSB_Logo_02_15
   - first:
-      213: 8112933205082278152
-    second: LSB_Logo_16
+      213: 8879390040430245733
+    second: LSB_Logo_02_16
   - first:
-      213: 1934970889021071683
-    second: LSB_Logo_17
+      213: -1655617674263585737
+    second: LSB_Logo_02_17
   - first:
-      213: -61178123240656994
-    second: LSB_Logo_18
+      213: 2817431005938168376
+    second: LSB_Logo_02_18
   - first:
-      213: -6175723484615419819
-    second: LSB_Logo_19
+      213: 1508589962675826808
+    second: LSB_Logo_02_19
   - first:
-      213: -7204282018942374064
-    second: LSB_Logo_20
+      213: -6709935500080053210
+    second: LSB_Logo_02_20
   - first:
-      213: 1095594932297028070
-    second: LSB_Logo_21
+      213: 1187404552169185837
+    second: LSB_Logo_02_21
   - first:
-      213: 7678061495194543912
-    second: LSB_Logo_22
+      213: 1549054835681170749
+    second: LSB_Logo_02_22
   - first:
-      213: 4280198717270662259
-    second: LSB_Logo_23
+      213: 2701861287508444103
+    second: LSB_Logo_02_23
   - first:
-      213: 2781158989593349697
-    second: LSB_Logo_24
+      213: 4945879861282526153
+    second: LSB_Logo_02_24
   - first:
-      213: -5189157523148630675
-    second: LSB_Logo_25
+      213: 514014105580865830
+    second: LSB_Logo_02_25
   - first:
-      213: -6649912127427612185
-    second: LSB_Logo_26
+      213: -9157692134753775282
+    second: LSB_Logo_02_26
   - first:
-      213: 6860176581595596040
-    second: LSB_Logo_27
+      213: -1412402490015337008
+    second: LSB_Logo_02_27
   - first:
-      213: 6607128760724355154
-    second: LSB_Logo_28
+      213: 7354138492078007520
+    second: LSB_Logo_02_28
   - first:
-      213: -96359318475171365
-    second: LSB_Logo_29
+      213: 7200832211115532846
+    second: LSB_Logo_02_29
   - first:
-      213: 5514152609637790402
-    second: LSB_Logo_30
+      213: 4103163193479995916
+    second: LSB_Logo_02_30
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -190,7 +190,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LSB_Logo_0
+      name: LSB_Logo_02_0
       rect:
         serializedVersion: 2
         x: 197
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c00767766ccc3b90800000000000000
-      internalID: -7260703758766112572
+      spriteID: e62704e6a99e65440800000000000000
+      internalID: 4924380092060168814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_1
+      name: LSB_Logo_02_1
       rect:
         serializedVersion: 2
         x: 278
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f3ce8e179abe01c0800000000000000
-      internalID: -4535482616500009998
+      spriteID: fe62ad73247007e50800000000000000
+      internalID: 6804947017943099119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_2
+      name: LSB_Logo_02_2
       rect:
         serializedVersion: 2
         x: 395
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9538d0cc07fec620800000000000000
-      internalID: 2796444052790719902
+      spriteID: 9f0665a107b2af940800000000000000
+      internalID: 5330620869424603385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_3
+      name: LSB_Logo_02_3
       rect:
         serializedVersion: 2
         x: 494
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa4d17c71f8faf9c0800000000000000
-      internalID: -3892525211849730897
+      spriteID: 9988fc056a70356c0800000000000000
+      internalID: -4155969620231092071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_4
+      name: LSB_Logo_02_4
       rect:
         serializedVersion: 2
         x: 649
@@ -293,14 +293,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67f58808a61bc5e80800000000000000
-      internalID: -8188474951485333642
+      spriteID: 50cdbeee6171629b0800000000000000
+      internalID: -5105367740312724475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_5
+      name: LSB_Logo_02_5
       rect:
         serializedVersion: 2
         x: 759
@@ -315,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15d79b051f947f110800000000000000
-      internalID: 1294584718682586449
+      spriteID: 5e323b0c34eac4b60800000000000000
+      internalID: 7731746266307306469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_6
+      name: LSB_Logo_02_6
       rect:
         serializedVersion: 2
         x: 878
@@ -337,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efd8c62ea5ada1370800000000000000
-      internalID: 8294181747636866558
+      spriteID: 20e8957be8f311ac0800000000000000
+      internalID: -3886255121250021886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_7
+      name: LSB_Logo_02_7
       rect:
         serializedVersion: 2
         x: 985
@@ -359,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9841130d249028810800000000000000
-      internalID: 1765984186448024713
+      spriteID: dc39aea7d47166770800000000000000
+      internalID: 8603589759680025549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_8
+      name: LSB_Logo_02_8
       rect:
         serializedVersion: 2
         x: 1143
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d20ca0f3c639a33e0800000000000000
-      internalID: -2073182585327271891
+      spriteID: d54f2139c20822290800000000000000
+      internalID: -7916624266029501347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_9
+      name: LSB_Logo_02_9
       rect:
         serializedVersion: 2
         x: 1248
@@ -403,14 +403,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 528f904825b7963d0800000000000000
-      internalID: -3212901264819357659
+      spriteID: f22b192c4469258c0800000000000000
+      internalID: -4011979095967419857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_10
+      name: LSB_Logo_02_10
       rect:
         serializedVersion: 2
         x: 1344
@@ -425,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6432f249bc1172670800000000000000
-      internalID: 8513793186629362502
+      spriteID: eec698be0cfc9a860800000000000000
+      internalID: 7541787478500928750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_11
+      name: LSB_Logo_02_11
       rect:
         serializedVersion: 2
         x: 1442
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d4139f2fb35ebba0800000000000000
-      internalID: -6071323167046822698
+      spriteID: 7ab01eaadc1ff8ec0800000000000000
+      internalID: -3562362914589307993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_12
+      name: LSB_Logo_02_12
       rect:
         serializedVersion: 2
         x: 1550
@@ -469,14 +469,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a23f95f926ed6fa80800000000000000
-      internalID: -8433308737043041494
+      spriteID: 5536a32b509a1e1f0800000000000000
+      internalID: -1017346198878919851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_13
+      name: LSB_Logo_02_13
       rect:
         serializedVersion: 2
         x: 1639
@@ -491,19 +491,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9ec15c042ffbc2a0800000000000000
-      internalID: -6715993889002369381
+      spriteID: 4a786592f5c26cdb0800000000000000
+      internalID: -4772077967925409884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_14
+      name: LSB_Logo_02_14
       rect:
         serializedVersion: 2
-        x: 474
-        y: 330
-        width: 51
+        x: 501
+        y: 341
+        width: 53
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -513,19 +513,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ce5faa9919568650800000000000000
-      internalID: 6234768700645269189
+      spriteID: aa88440f7fb7375e0800000000000000
+      internalID: -1913049111884166998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_15
+      name: LSB_Logo_02_15
       rect:
         serializedVersion: 2
-        x: 529
-        y: 330
-        width: 56
+        x: 556
+        y: 341
+        width: 58
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -535,62 +535,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 002367d40078e7360800000000000000
-      internalID: 7169316092189749760
+      spriteID: b98d6c9c2da8f7930800000000000000
+      internalID: 4143182820137162907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_16
+      name: LSB_Logo_02_16
       rect:
         serializedVersion: 2
-        x: 590
-        y: 330
-        width: 48
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 809866f04cde69070800000000000000
-      internalID: 8112933205082278152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_17
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 329
-        width: 42
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 341a2da85c56ada10800000000000000
-      internalID: 1934970889021071683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_18
-      rect:
-        serializedVersion: 2
-        x: 691
-        y: 330
+        x: 617
+        y: 341
         width: 50
         height: 134
       alignment: 0
@@ -601,18 +557,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9f273032d6a62ff0800000000000000
-      internalID: -61178123240656994
+      spriteID: 5677cfd523ee93b70800000000000000
+      internalID: 8879390040430245733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_19
+      name: LSB_Logo_02_17
       rect:
         serializedVersion: 2
-        x: 771
-        y: 329
+        x: 670
+        y: 340
         width: 44
         height: 136
       alignment: 0
@@ -623,18 +579,150 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 558d57c063c6b4aa0800000000000000
-      internalID: -6175723484615419819
+      spriteID: 73c19a14f701609e0800000000000000
+      internalID: -1655617674263585737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_20
+      name: LSB_Logo_02_18
       rect:
         serializedVersion: 2
-        x: 819
-        y: 329
+        x: 718
+        y: 341
+        width: 52
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832bd109296891720800000000000000
+      internalID: 2817431005938168376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_19
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 340
+        width: 46
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870330504969fe410800000000000000
+      internalID: 1508589962675826808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_20
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 340
+        width: 51
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62402f3a63581e2a0800000000000000
+      internalID: -6709935500080053210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_21
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 341
+        width: 54
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22e9b826228a7010800000000000000
+      internalID: 1187404552169185837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_22
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 341
+        width: 20
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3590627a295f7510800000000000000
+      internalID: 1549054835681170749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_23
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 341
+        width: 54
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c30252a680fe7520800000000000000
+      internalID: 2701861287508444103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_24
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 340
         width: 49
         height: 136
       alignment: 0
@@ -645,19 +733,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05fa4377caf350c90800000000000000
-      internalID: -7204282018942374064
+      spriteID: 9c3d089878b43a440800000000000000
+      internalID: 4945879861282526153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_21
+      name: LSB_Logo_02_25
       rect:
         serializedVersion: 2
-        x: 875
-        y: 330
-        width: 52
+        x: 1125
+        y: 341
+        width: 57
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -667,107 +755,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e1584549c5543f00800000000000000
-      internalID: 1095594932297028070
+      spriteID: 62900bc0b15222700800000000000000
+      internalID: 514014105580865830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_22
+      name: LSB_Logo_02_26
       rect:
         serializedVersion: 2
-        x: 936
-        y: 330
-        width: 18
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 827eca0ff34fd8a60800000000000000
-      internalID: 7678061495194543912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_23
-      rect:
-        serializedVersion: 2
-        x: 962
-        y: 330
-        width: 52
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 37c100f4e02566b30800000000000000
-      internalID: 4280198717270662259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_24
-      rect:
-        serializedVersion: 2
-        x: 1022
-        y: 329
-        width: 47
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14e8896ad59a89620800000000000000
-      internalID: 2781158989593349697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_25
-      rect:
-        serializedVersion: 2
-        x: 1098
-        y: 330
-        width: 55
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d651e2dd9b86cf7b0800000000000000
-      internalID: -5189157523148630675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_26
-      rect:
-        serializedVersion: 2
-        x: 1156
-        y: 329
-        width: 46
+        x: 1183
+        y: 340
+        width: 48
         height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -777,19 +777,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e17d112724c6b3a0800000000000000
-      internalID: -6649912127427612185
+      spriteID: e41dc91e58759e080800000000000000
+      internalID: -9157692134753775282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_27
+      name: LSB_Logo_02_27
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 330
-        width: 48
+        x: 1231
+        y: 341
+        width: 50
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -799,41 +799,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8058572114e343f50800000000000000
-      internalID: 6860176581595596040
+      spriteID: 0d532c62b63266ce0800000000000000
+      internalID: -1412402490015337008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_28
-      rect:
-        serializedVersion: 2
-        x: 1256
-        y: 330
-        width: 18
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 258fd301a9c31bb50800000000000000
-      internalID: 6607128760724355154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LSB_Logo_29
+      name: LSB_Logo_02_28
       rect:
         serializedVersion: 2
         x: 1283
-        y: 329
-        width: 49
+        y: 341
+        width: 20
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e42651aef52f0660800000000000000
+      internalID: 7354138492078007520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LSB_Logo_02_29
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 340
+        width: 51
         height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -843,19 +843,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd91d7bd5b9a9aef0800000000000000
-      internalID: -96359318475171365
+      spriteID: e226bbe8ebe7ee360800000000000000
+      internalID: 7200832211115532846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LSB_Logo_30
+      name: LSB_Logo_02_30
       rect:
         serializedVersion: 2
-        x: 1340
-        y: 330
-        width: 52
+        x: 1367
+        y: 341
+        width: 54
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -865,8 +865,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c2f0ce4594368c40800000000000000
-      internalID: 5514152609637790402
+      spriteID: c0225da5f2d51f830800000000000000
+      internalID: 4103163193479995916
       vertices: []
       indices: 
       edges: []
@@ -885,37 +885,37 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LSB_Logo_0: -7260703758766112572
-      LSB_Logo_1: -4535482616500009998
-      LSB_Logo_10: 8513793186629362502
-      LSB_Logo_11: -6071323167046822698
-      LSB_Logo_12: -8433308737043041494
-      LSB_Logo_13: -6715993889002369381
-      LSB_Logo_14: 6234768700645269189
-      LSB_Logo_15: 7169316092189749760
-      LSB_Logo_16: 8112933205082278152
-      LSB_Logo_17: 1934970889021071683
-      LSB_Logo_18: -61178123240656994
-      LSB_Logo_19: -6175723484615419819
-      LSB_Logo_2: 2796444052790719902
-      LSB_Logo_20: -7204282018942374064
-      LSB_Logo_21: 1095594932297028070
-      LSB_Logo_22: 7678061495194543912
-      LSB_Logo_23: 4280198717270662259
-      LSB_Logo_24: 2781158989593349697
-      LSB_Logo_25: -5189157523148630675
-      LSB_Logo_26: -6649912127427612185
-      LSB_Logo_27: 6860176581595596040
-      LSB_Logo_28: 6607128760724355154
-      LSB_Logo_29: -96359318475171365
-      LSB_Logo_3: -3892525211849730897
-      LSB_Logo_30: 5514152609637790402
-      LSB_Logo_4: -8188474951485333642
-      LSB_Logo_5: 1294584718682586449
-      LSB_Logo_6: 8294181747636866558
-      LSB_Logo_7: 1765984186448024713
-      LSB_Logo_8: -2073182585327271891
-      LSB_Logo_9: -3212901264819357659
+      LSB_Logo_02_0: 4924380092060168814
+      LSB_Logo_02_1: 6804947017943099119
+      LSB_Logo_02_10: 7541787478500928750
+      LSB_Logo_02_11: -3562362914589307993
+      LSB_Logo_02_12: -1017346198878919851
+      LSB_Logo_02_13: -4772077967925409884
+      LSB_Logo_02_14: -1913049111884166998
+      LSB_Logo_02_15: 4143182820137162907
+      LSB_Logo_02_16: 8879390040430245733
+      LSB_Logo_02_17: -1655617674263585737
+      LSB_Logo_02_18: 2817431005938168376
+      LSB_Logo_02_19: 1508589962675826808
+      LSB_Logo_02_2: 5330620869424603385
+      LSB_Logo_02_20: -6709935500080053210
+      LSB_Logo_02_21: 1187404552169185837
+      LSB_Logo_02_22: 1549054835681170749
+      LSB_Logo_02_23: 2701861287508444103
+      LSB_Logo_02_24: 4945879861282526153
+      LSB_Logo_02_25: 514014105580865830
+      LSB_Logo_02_26: -9157692134753775282
+      LSB_Logo_02_27: -1412402490015337008
+      LSB_Logo_02_28: 7354138492078007520
+      LSB_Logo_02_29: 7200832211115532846
+      LSB_Logo_02_3: -4155969620231092071
+      LSB_Logo_02_30: 4103163193479995916
+      LSB_Logo_02_4: -5105367740312724475
+      LSB_Logo_02_5: 7731746266307306469
+      LSB_Logo_02_6: -3886255121250021886
+      LSB_Logo_02_7: 8603589759680025549
+      LSB_Logo_02_8: -7916624266029501347
+      LSB_Logo_02_9: -4011979095967419857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

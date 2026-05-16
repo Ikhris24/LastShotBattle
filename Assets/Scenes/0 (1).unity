@@ -1857,8 +1857,8 @@ MonoBehaviour:
   _roundSet: 2
   _player1Wins: 0
   _player2Wins: 0
-  player1Health: {fileID: 1782286524356814059, guid: 6770ade3a2284624f9e8389894a0a445, type: 3}
-  player2Health: {fileID: 1782286524356814059, guid: 6770ade3a2284624f9e8389894a0a445, type: 3}
+  player1Health: {fileID: 7828567134758324379, guid: 7d2548a370ca03241ab9407c5ca8b8ff, type: 3}
+  player2Health: {fileID: 7828567134758324379, guid: 7d2548a370ca03241ab9407c5ca8b8ff, type: 3}
   roundAnnounceEvent:
     Guid:
       Data1: 318551083
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
   m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
+  m_MaxPlayerCount: 2
   m_AllowJoining: 1
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:
@@ -3513,7 +3513,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 5455540067694295125, guid: 6770ade3a2284624f9e8389894a0a445, type: 3}
+  m_PlayerPrefab: {fileID: 7787911801225736547, guid: 7d2548a370ca03241ab9407c5ca8b8ff, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
