@@ -27,7 +27,7 @@ public class GameStart : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartRound());
+        StartRound();
     }
 
     IEnumerator StartRound()
